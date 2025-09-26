@@ -1,10 +1,10 @@
 from playsound import playsound
 import time
 
-CLEAR= "\033[2"
-CLEAR_AND_RETURN = "\033[H"
+CLEAR= "\033[2"        # Clearing terminal
+CLEAR_AND_RETURN = "\033[H"     # Clearing terminal
 
-def alarm(second):
+def alarm(second): 
     time_slip=0
 
     
@@ -15,11 +15,11 @@ def alarm(second):
 
         time_left= second - time_slip
         minutes_left= time_left // 60  # gives aprox value  
-        seconds_left =time_left % 60
+        seconds_left =time_left % 60    
 
-        print(f"{CLEAR_AND_RETURN}{minutes_left:2d}:{seconds_left:2d}")
+        print(f"{CLEAR_AND_RETURN} Alarm will sounds in {minutes_left:2d}:{seconds_left:2d}")
 
-print("alarm_sound.mp3")
+print("alarm_sound.mp3") # printing Sound file
 
 minutes =int(input("Enter minute to wait:"))
 seconds  =int(input("Enter seconds to wait:"))
